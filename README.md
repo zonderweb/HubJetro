@@ -1,1 +1,3 @@
-Adaptive Jetro vs SmartGrid
+# Jetro vs SmartGrid
+
+** Adaptive layout **
