@@ -1,0 +1,85 @@
+.portfolio-page {
+	margin-bottom: 0;
+}
+
+.portfolio {
+	.work {
+		margin-bottom: 40px;
+	}
+}
+.portfolio-navigation {
+	margin-bottom: 25px;
+}
+.portNav {
+	&__items {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	&__list {
+		display: inline-block;
+		font-family: $title-font;
+		font-size: 18px;
+		font-weight: bold;		
+	}
+	&__link {
+		padding: 7px 10px;
+		color: #b9b9b9;
+		&:hover {
+			text-decoration: none;
+			color: $white;
+			background: $red;
+		}
+	}
+	&__active {
+		background: $accent;
+		color: $white;
+		&:hover {
+			color: $white;
+			background: $accent;
+		}
+	}
+}
+
+// HOVER Еффект
+
+.work__pic {
+	position: relative;
+}
+
+.hover-bg {
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #000;
+	opacity: .75;
+}
+
+.work__pic {
+	.hover-plus {
+		display: none;
+		position: absolute;
+		max-width: none;
+		min-height: 0;
+		top: 50%;
+    left: 50%;
+    margin-right: -50%;
+		transform: translate(-50%, -50%);
+		
+		@include sm-block {
+			width: auto;
+		}
+	}
+}
+.work__pic:hover {
+	.hover-bg,
+	.hover-plus {
+		display: block;
+		@include xs-block {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,96 @@
+.footer {
+	overflow: hidden;
+	color: $white;
+	p {
+		color: $white;
+	}
+}
+
+.footer__colorline {
+	background: $accent;
+	position: relative;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		background: #f3b29d;
+		height: 100%;
+		width: 1000px;
+	}
+
+	&::before {
+		right: 100%;
+		margin-right: 10px;
+	}
+
+	&::after {
+		left: 100%;
+		top: 0;
+		margin-left: 10px;
+	}
+}
+
+.footer__items {
+	@include row-flex();
+	justify-content: center;
+	padding: 40px 30px;
+
+}
+
+.footer__item {
+	@include col();
+	@include size(4);
+	padding-right: 20px;
+	@include size-xs(12);
+	@include xs-block {
+		margin-bottom: 20px;
+	}
+}
+
+.footer__title {
+	font-family: $title-font;
+	font-size: 22px;
+	line-height: 1.2em;
+	margin-bottom: 25px;
+}
+
+.footer__text,
+.post__text,
+.post__link,
+.follow__user {
+	font-size: 12px;
+	line-height: 1.2em;
+	color: $white;
+}
+
+.post__text {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.post__link {
+	text-decoration: none;
+	color: #f3b29d;
+
+	&:hover {
+		text-decoration: none;
+		color: #f3b29d;
+	}
+}
+
+.link__time {
+	display: block;
+}
+
+.twitter__post {
+	margin-bottom: 20px;
+}
+
+.mail-link {
+	text-decoration: none;
+	color: $white;
+	&:hover {
+		color: $white;
+	}
+}

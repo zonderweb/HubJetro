@@ -1,0 +1,202 @@
+.post {
+	position: relative;
+}
+
+.post__main {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	padding-bottom: 30px;
+	margin-bottom: 50px;
+	@include xs-block {
+		display: block;
+	}
+	
+	&::after {
+		content: "";
+		position: absolute;
+		height: 10px;
+		width: 100%;
+		background: url(../img/pattern.png) 0 0;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+.postInfo__ico {
+	background: $accent;
+	width: 75px;
+	height: 75px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: -85px;
+}
+.post__header {
+	max-width: 100%;
+	max-height: 300px;
+	margin-bottom: 25px;
+	overflow: hidden;
+	img {
+		width: 100%;
+	}
+}
+.block__info {
+	margin-right: 10px;
+	min-width: 140px;
+	@include xs-block {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
+.date {
+	font-size: 12px;
+	line-height: 20px;
+	color: #bababa;
+}
+.info__title {
+	text-transform: uppercase;
+	font-family: $title-font;
+	color: $accent;
+	font-weight: bold;
+	font-size: 15px;
+	display: block;
+}
+
+.tags__link {
+	color: #bababa;
+	display: inline-block;
+	border-right: 1px solid #bababa;
+	line-height: 13px;
+	padding-right: 7px;
+	padding-left: 5px;
+	&:hover {
+		color: #bababa;
+	}
+
+	&:first-child {
+		padding-left: 0;
+	}
+
+	&:last-child {
+		border-right: none;
+	}
+}
+
+.date__text,
+.tags__links {
+	margin-bottom: 10px;
+	display: block;
+}
+
+.article__title {
+	font-family: $title-font;
+	font-size: 22px;
+	line-height: 22px;
+	color: $accent;
+	margin-bottom: 20px;
+}
+
+.title__link {
+	color: $accent;
+
+	&:hover {
+		color: #f0ac9b;
+		text-decoration: none;
+	}
+}
+
+.block__previewText {
+	p {
+		margin-bottom: 20px;
+	}
+}
+
+.link__postPic {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.quoteBlock {
+	background: #f0f0f0;
+	padding: 25px 60px 0 75px;
+	margin-bottom: 30px;
+	@include xs-block {
+		padding-bottom: 10px;
+	}
+}
+.quote__text {
+	margin-bottom: 20px;
+	font-style: italic;
+	position: relative;
+
+	&:before {
+		content: '"';
+		color: $accent;
+		position: absolute;
+		font-size: 72px;
+		line-height: 18px;
+		font-family: Georgia, 'Times New Roman', Times, serif;
+		left: -45px;
+		top: 15px;
+	}
+}
+
+.bottomLink__title {
+	margin-top: -15px;
+	display: block;
+	color: #a0a0a0;
+	font-size: 13px;
+	line-height: 18px;
+	margin-bottom: 20px;
+	&:hover {
+		color: #a0a0a0;
+	}
+}
+
+// PAGINATION
+.pagination {
+	&__items {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__list {
+		display: inline-block;
+	}
+
+	&__link {
+		background: #f3b29d;
+		color: $white;
+		padding: 7px 10px;
+		&:hover {
+			color: $white;
+			text-decoration: none;
+			background: $accent;
+		}
+	}
+
+	&__active {
+		background: $accent;
+	}
+
+}
+
+// Adaptive karkas
+
+.main-content {
+	@include size-xs(12);
+	@include xs-block {
+		margin-bottom: 60px;
+	}
+}
+
+.sidebar {
+	@include size-xs(12);
+}

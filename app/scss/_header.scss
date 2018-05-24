@@ -1,0 +1,83 @@
+//.header {}
+
+.topHeader {
+	display: flex;
+	align-items: center;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+.logo {
+	font-family: $title-font;
+	font-size: 44px;
+	font-weight: bold;
+	line-height: 1.2;
+	color: $accent;
+
+	&:hover {
+		text-decoration: none;
+		color: $accent;
+	}
+}
+
+.logo__color {
+	color: #f3af9d;
+}
+
+// .mainMenu {
+// 	display: none;
+// }
+
+.mainMenu__items {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+
+.mainMenu__link {
+	display: block;
+	flex-shrink: 0;
+	font-size: 20px;
+	line-height: 1.2;
+	font-weight: bold;
+	font-family: $title-font;
+	margin-left: 30px;
+	color: #b9b9b9;
+
+	&:hover {
+		text-decoration: none;
+		color: $accent;
+	}
+}
+
+.mainMenu__link--active {
+	color: $accent;
+
+	span {
+		color: #f1ad9b;
+	}
+}
+
+.toggle {
+	border: 0;
+	background-color: transparent;
+	display: none;
+	outline: none;
+	vertical-align: middle;
+	text-align: center;
+	white-space: nowrap;
+	cursor: pointer;
+
+	&:hover .menu-icon {
+		@include hamburger-animation();
+	}
+}
+
+.menu-icon {
+	@include hamburger-generator(24px, 3px, 5px, $accent, $timing-function: linear);
+}

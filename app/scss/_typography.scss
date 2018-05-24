@@ -1,0 +1,89 @@
+.img__left {
+	img {
+		float: left;
+		margin-right: 20px;
+		border: 1px solid #ccc;
+		padding: 2px; 
+	}
+}
+
+.big__letter {
+	span {
+		color: $accent;
+		font-size: 40px;
+		font-weight: bold;
+		line-height: 1em;
+		float: left;
+		position: relative;
+		margin-right: 5px;
+	}
+}
+
+.line__italic {
+	margin-left: 50px;
+	padding-left: 28px;
+	font-style: italic;
+	position: relative;
+	&::before {
+		content: "";
+		background: $accent;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 8px;
+
+	}
+}
+
+.p__double {
+	display: flex;
+	justify-content: center;
+	p {
+		max-width: 50%;
+	}
+}
+
+.p__triple {
+	display: flex;
+	justify-content: space-around;
+
+	p {
+		max-width: 32%;
+	}
+}
+
+.alert {
+	display: flex;
+	justify-content: center;
+	max-width: 100%;
+	padding: 20px 10px;
+	font-size: 14px;
+	line-height: 20px;
+	font-style: italic;
+	margin-bottom: 18px;
+
+	&--olive {
+		background: $olive;
+		border: 1px solid $olive-black;
+		color: $olive-black;
+	}
+
+	&--red {
+		background: $red;
+		border: 1px solid $red-black;
+		color: $red-black;
+	}
+
+	&--yellow {
+		background: $yellow;
+		border: 1px solid $yellow-black;
+		color: $yellow-black;
+	}
+
+	&--blue {
+		background: $blue;
+		border: 1px solid $blue-black;
+		color: $blue-black;
+	}
+}

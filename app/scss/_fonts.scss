@@ -1,0 +1,9 @@
+@import "_mixins/font-face";
+
+
+
+@include font-face("helvetica", "../fonts/HelveticaRegular/HelveticaRegular");
+@include font-face("helvetica", "../fonts/HelveticaLight/HelveticaLight", 100);
+
+@include font-face("bebas", "../fonts/BebasRegular/BebasRegular");
+@include font-face("bebas", "../fonts/BebasBold/BebasBold", bold);
